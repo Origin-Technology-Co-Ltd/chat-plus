@@ -1,0 +1,11 @@
+node_modules/
+dist/
+data/
+.env
+.env.local
+*.log
+.DS_Store
+.cursor/
+src-tauri/target/
+src-tauri/binaries/chatplus-backend-*
+.sidecar-build/

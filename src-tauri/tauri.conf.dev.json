@@ -1,0 +1,10 @@
+{
+  "productName": "ChatPlus-dev",
+  "app": {
+    "windows": [
+      {
+        "title": "ChatPlus-dev"
+      }
+    ]
+  }
+}
