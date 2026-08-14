@@ -1,0 +1,24 @@
+{
+  "name": "app100-chatplus",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c blue,green \"pnpm --filter backend dev\" \"pnpm --filter frontend dev\"",
+    "build": "pnpm --filter backend build && pnpm --filter frontend build",
+    "typecheck": "pnpm --filter backend typecheck && pnpm --filter frontend typecheck",
+    "sidecar:build": "pnpm --filter backend build && node scripts/build-sidecar.mjs",
+    "tauri:dev": "pnpm run sidecar:build && pnpm tauri dev --config src-tauri/tauri.conf.dev.json",
+    "tauri:build": "pnpm run sidecar:build && pnpm tauri build"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.11.4",
+    "@yao-pkg/pkg": "^6.21.0",
+    "concurrently": "^9.1.2",
+    "esbuild": "^0.28.1"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "better-sqlite3",
+      "esbuild"
+    ]
+  }
+}

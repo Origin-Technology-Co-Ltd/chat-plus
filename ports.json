@@ -1,0 +1,10 @@
+{
+  "web": {
+    "frontend": 18770,
+    "backend": 18771
+  },
+  "desktop": {
+    "frontendDev": 18772,
+    "backend": 18773
+  }
+}
